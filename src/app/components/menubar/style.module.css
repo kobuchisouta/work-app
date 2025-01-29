@@ -1,0 +1,45 @@
+.menuBarWrap {
+	padding: 0 20px;
+	background-color: #f8f9fa;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	height: 100%;
+	width: 200px;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 100px;
+}
+.logo p {
+	font-size: 13px;
+	font-weight: bold;
+	color: blue;
+	margin: 0;
+}
+
+.menuBar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 30px;
+	padding-top: 40px;
+}
+
+.menuItem {
+	display: flex;
+	align-items: center;
+	gap: 20px; /* 画像とテキストの間のスペース */
+}
+
+.menuText {
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+	margin: 0; /* デフォルトのマージンをリセット */
+}

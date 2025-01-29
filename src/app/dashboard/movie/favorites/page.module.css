@@ -1,0 +1,117 @@
+.movieWrap {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	/* gap: 20px; */
+}
+.Beginnermovie {
+	margin-top: 40px;
+}
+
+.Beginnermovie > .title {
+	font-size: 18px;
+	background-color: #62b0e8;
+	color: white;
+	padding: 10px 60px;
+	border-radius: 0px 20px 0px 0px;
+	display: inline-block;
+}
+
+.contents {
+	display: flex;
+	gap: 32px;
+	width: 100%;
+	border-top: 2px solid #d9d9d9;
+	overflow-x: scroll;
+	padding-top: 20px;
+}
+.modalVideo {
+	border: none;
+}
+
+/* function Modal(props: ModalProps) {
+	return (
+	  <div>
+		{props.state.modalFlg &&
+		  <div className={styles.modal}>
+			<div className={styles.modalContent}>
+			  <h2>{props.state.clickMovie.title}</h2>
+			  <p>{props.state.clickMovie.text}</p>
+			  <iframe
+				width="560"
+				height="315"
+				src={`https://www.youtube.com/embed/${props.state.clickMovie.videoId}`}
+				title={props.state.clickMovie.title}
+				frameBorder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowFullScreen
+			  />
+			  <button type="button" onClick={() => props.setState(initialState)}>閉じる</button>
+			</div>
+		  </div>}
+	  </div>
+	)
+  } */
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.modalContent {
+	width: 80%;
+	height: 80%;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	overflow-y: auto;
+}
+
+.modalContent h2 {
+	font-size: 1.5rem;
+}
+
+.modalContent p {
+	margin-top: 20px;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	padding: 20px;
+	color: #333;
+	line-height: 1.5rem;
+}
+
+.modalContent iframe {
+	width: 100%;
+	height: 100%;
+	padding: 20px 0;
+}
+
+.modalContent button {
+	display: block;
+	margin: 20px auto 0;
+	padding: 10px 20px;
+	background-color: #0070f3;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.modalContent button:hover {
+	background-color: #005bb5;
+}
+
+.modalContent button:focus {
+	outline: none;
+}
