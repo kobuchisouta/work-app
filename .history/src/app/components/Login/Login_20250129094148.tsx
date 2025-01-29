@@ -2,11 +2,12 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../lib/firebaseConfig";
 import styles from "./Login.module.css";
+import { log } from "node:console";
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error] = useState<null>(null);
+    const [error, setError] = useState<null>(null);
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();

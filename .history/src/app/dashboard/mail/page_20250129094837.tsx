@@ -12,7 +12,7 @@ type Email = {
 }
 
 export default function EmailsPage() {
-    const [selectedEmail, setSelectedEmail] = useState<Email | null>(null);
+    const [selectedEmail, setSelectedEmail] = useState(null);
     const [selectedFolder, setSelectedFolder] = useState('受信トレイ');  // フォルダ選択状態を管理
 
     const folders = ['受信トレイ', '送信済み', '下書き', '迷惑メール'];
@@ -77,8 +77,6 @@ export default function EmailsPage() {
                             key={folder}
                             className={`${styles.folder} ${selectedFolder === folder ? styles.selectedFolder : ''}`}
                             onClick={() => handleFolderChange(folder)}
-                            onKeyUp={(e) => e.key === 'Enter' && handleFolderChange(folder)}
-                        // tabIndex={0}
                         >
                             {folder}
                         </li>
@@ -89,39 +87,33 @@ export default function EmailsPage() {
             <div className={styles.main}>
                 {/* メールリスト */}
                 <div className={styles.emailList}>
-                    {
-                        emails[selectedFolder].map(email => (
-                            <div
-                                key={email.id}
-                                className={`${styles.emailItem} ${selectedEmail?.id === email.id ? styles.selected : ''}`}
-                                onClick={() => setSelectedEmail(email)}
-                                onKeyUp={(e) => e.key === 'Enter' && setSelectedEmail(email)}
+                    <h2>{selectedFolder}</h2>
+                    {emails[selectedFolder].map((email: string) => (
+                        <div
+                            key={email.id}
+                            className={`${styles.emailItem} ${selectedEmail?.id === email.id ? styles.selected : ''}`}
+                            onClick={() => setSelectedEmail(email)}
+                        >
+                            <h3>{email.subject}</h3>
+                            <p className={styles.sender}>{email.sender}</p>
+                            <p className={styles.preview}>{email.preview}</p>
+                        </div>
+                    ))}
+                </div>
 
-                            >
-                                <h3>{email.subject}</h3>
-                                <p className={styles.sender}>{email.sender}</p>
-                                <p className={styles.preview}>{email.preview}</p>
-                                <p className={styles.preview}>{email.preview}</p>
-                            </div>
-                        ))
-                    }
-
+                {/* メール詳細 */}
+                <div className={styles.emailDetails}>
+                    {selectedEmail ? (
+                        <>
+                            <h2>{selectedEmail.subject}</h2>
+                            <p className={styles.sender}>送信者: {selectedEmail.sender}</p>
+                            <p>{selectedEmail.content}</p>
+                        </>
+                    ) : (
+                        <p className={styles.noSelection}>表示するメールを選択してください</p>
+                    )}
                 </div>
             </div>
-
-            {/* メール詳細 */}
-            <div className={styles.emailDetails}>
-                {selectedEmail ? (
-                    <>
-                        <h2>{selectedEmail.subject}</h2>
-                        <p className={styles.sender}>送信者: {selectedEmail.sender}</p>
-                        <p>{selectedEmail.content}</p>
-                    </>
-                ) : (
-                    <p className={styles.noSelection}>表示するメールを選択してください</p>
-                )}
-            </div>
         </div>
-
     );
 }

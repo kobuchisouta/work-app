@@ -33,34 +33,37 @@ type ModalProps = {
 
 function Modal(props: ModalProps) {
 
-    // const [favorites, setFavorites] = useState<string[]>([]);
-    return (
-        <>
-            {props.state.modalFlg &&
-                // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
-                <div className={styles.modal}
-                    onClick={() => props.setState(initialState)}
-                >
-                    {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-                    <div className={styles.modalContent}
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <h2>{props.state.clickMovie.title}</h2>
-                        <iframe
-                            className={styles.modalVideo}
-                            src={`https://www.youtube.com/embed/${props.state.clickMovie.videoId}`}
-                            title={props.state.clickMovie.title}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        />
-                        <p>{props.state.clickMovie.about}</p>
-                        <button type="button" onClick={() => props.setState(initialState)}>閉じる</button>
-                    </div>
-                </div>
-            }
 
-        </>
-    )
+    function Modal(props: ModalProps) {
+        const [favorites, setFavorites] = useState<string[]>([]);
+        return (
+            <>
+                {props.state.modalFlg &&
+                    // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
+                    <div className={styles.modal}
+                        onClick={() => props.setState(initialState)}
+                    >
+                        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+                        <div className={styles.modalContent}
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <h2>{props.state.clickMovie.title}</h2>
+                            <iframe
+                                className={styles.modalVideo}
+                                src={`https://www.youtube.com/embed/${props.state.clickMovie.videoId}`}
+                                title={props.state.clickMovie.title}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                            <p>{props.state.clickMovie.about}</p>
+                            <button type="button" onClick={() => props.setState(initialState)}>閉じる</button>
+                        </div>
+                    </div>
+                }
+
+            </>
+        )
+    }
 }
 export default function Page() {
     const [state, setState] = useState<State>(initialState);
@@ -68,7 +71,7 @@ export default function Page() {
 
     return (
         <div className={styles.container}>
-            {state.modalFlg && <Modal state={state} setState={setState} />}
+            <Modal state={state} setState={setState} />
             {/* /* <NewLogin /> */}
             {/* <Login /> */}
             <div className={styles.movieWrap}>

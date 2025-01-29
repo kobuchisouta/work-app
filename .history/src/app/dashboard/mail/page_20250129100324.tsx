@@ -113,7 +113,7 @@ export default function EmailsPage() {
             <div className={styles.emailDetails}>
                 {selectedEmail ? (
                     <>
-                        <h2>{selectedEmail.subject}</h2>
+                        <h2>{selectedEmail.s}</h2>
                         <p className={styles.sender}>送信者: {selectedEmail.sender}</p>
                         <p>{selectedEmail.content}</p>
                     </>

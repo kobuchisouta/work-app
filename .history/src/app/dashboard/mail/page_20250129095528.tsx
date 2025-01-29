@@ -12,7 +12,7 @@ type Email = {
 }
 
 export default function EmailsPage() {
-    const [selectedEmail, setSelectedEmail] = useState<Email | null>(null);
+    const [selectedEmail, setSelectedEmail] = useState(null);
     const [selectedFolder, setSelectedFolder] = useState('受信トレイ');  // フォルダ選択状態を管理
 
     const folders = ['受信トレイ', '送信済み', '下書き', '迷惑メール'];
@@ -122,6 +122,6 @@ export default function EmailsPage() {
                 )}
             </div>
         </div>
-
+        </div >
     );
 }

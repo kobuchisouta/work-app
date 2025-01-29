@@ -33,7 +33,7 @@ type ModalProps = {
 
 function Modal(props: ModalProps) {
 
-    // const [favorites, setFavorites] = useState<string[]>([]);
+    const [favorites, setFavorites] = useState<string[]>([]);
     return (
         <>
             {props.state.modalFlg &&
@@ -61,6 +61,7 @@ function Modal(props: ModalProps) {
 
         </>
     )
+
 }
 export default function Page() {
     const [state, setState] = useState<State>(initialState);
@@ -68,7 +69,7 @@ export default function Page() {
 
     return (
         <div className={styles.container}>
-            {state.modalFlg && <Modal state={state} setState={setState} />}
+            <Modal state={state} setState={setState} />
             {/* /* <NewLogin /> */}
             {/* <Login /> */}
             <div className={styles.movieWrap}>

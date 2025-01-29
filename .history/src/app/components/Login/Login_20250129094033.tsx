@@ -6,7 +6,7 @@ import styles from "./Login.module.css";
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error] = useState<null>(null);
+    const [error, setError] = useState("");
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -14,8 +14,7 @@ export default function Login() {
             await signInWithEmailAndPassword(auth, email, password);
             // ログイン成功時の処理
         } catch (error) {
-            console.log(error);
-
+            console.log(setError(error.message));
         }
     };
 

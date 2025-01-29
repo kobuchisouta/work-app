@@ -2,6 +2,7 @@ import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../lib/firebaseConfig";
 import styles from "./Login.module.css";
+import { log } from "node:console";
 
 export default function Login() {
     const [email, setEmail] = useState("");
