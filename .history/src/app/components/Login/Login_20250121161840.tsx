@@ -8,7 +8,7 @@ export default function Login() {
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    const handleLogin = async (e: React.FormEvent) => {
+    const handleLogin = async (e: any) => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);

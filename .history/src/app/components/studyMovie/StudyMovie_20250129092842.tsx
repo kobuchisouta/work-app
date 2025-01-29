@@ -9,7 +9,6 @@ type StudyMovieProps = {
     onClick?: () => void;
 }
 
-import Image from "next/image";
 import style from "./page.module.css";
 
 export default function StudyMovie(props: StudyMovieProps) {
@@ -19,6 +18,7 @@ export default function StudyMovie(props: StudyMovieProps) {
             <div className={style.videoContainer}>
                 <div className={style.thumbnail}>
                     <Image
+
                         className={style.thumbnailImg}
                         src={`https://img.youtube.com/vi/${props.videoId}/maxresdefault.jpg`}
                         alt={props.title}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-
+import styles from "./NewLogin.module.css";
 
 // Firebaseの設定
 const firebaseConfig = {
