@@ -22,6 +22,8 @@ export default function StudyMovie(props: StudyMovieProps) {
                         className={style.thumbnailImg}
                         src={`https://img.youtube.com/vi/${props.videoId}/maxresdefault.jpg`}
                         alt={props.title}
+                        width={560} // 適切な幅を指定
+                        height={315}
                     />
 
                 </div>
