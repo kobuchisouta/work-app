@@ -1,0 +1,371 @@
+
+
+body {
+  background: radial-gradient(1200px 800px at 20% 10%, #e8f3ff 0%, transparent 55%),
+    radial-gradient(900px 700px at 80% 0%, #efe9ff 0%, transparent 60%),
+    #f7f8fb;
+}
+
+.page {
+  min-height: 100vh;
+  background: radial-gradient(1200px 800px at 20% 10%, #e8f3ff 0%, transparent 55%),
+    radial-gradient(900px 700px at 80% 0%, #efe9ff 0%, transparent 60%),
+    #f7f8fb;
+  padding-bottom: 40px;
+}
+
+.topBar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 16px 0;
+}
+
+.backLink {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  color: #334155;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 12px auto 0;
+  padding: 18px 16px;
+}
+
+.heroInner {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 16px;
+  border-radius: 18px;
+  padding: 18px;
+  background: linear-gradient(135deg, #ffffff 0%, #fbfbff 100%);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.kicker {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin: 0 0 6px;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.heroSub {
+  margin-top: 10px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.metaRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 13px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.statsBox {
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0b1220 0%, #14213d 100%);
+  color: #fff;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.stat {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.statLabel {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.statValue {
+  margin: 4px 0 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.statMono {
+  margin: 4px 0 0;
+  font-size: 12px;
+  opacity: 0.9;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  word-break: break-all;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 14px auto 0;
+  padding: 0 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 18px;
+  color: #0f172a;
+}
+
+.cardHint {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.bodyText {
+  margin: 0;
+  color: #334155;
+  line-height: 1.9;
+}
+
+.muted {
+  margin: 0;
+  color: #64748b;
+}
+
+.errorInline {
+  margin: 0;
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.chipGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 100%);
+  color: #0f172a;
+  font-weight: 700;
+  font-size: 13px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.workCard {
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+}
+
+.workTitle {
+  margin: 0;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.workDesc {
+  margin: 8px 0 0;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.chartCard {
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: #ffffff;
+}
+
+.chartTitle {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.chartBox {
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px dashed rgba(15, 23, 42, 0.14);
+  padding: 10px;
+}
+
+/* 連絡 */
+.contactRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.contactItem {
+  border-radius: 14px;
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.contactLabel {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.contactValue {
+  margin: 6px 0 0;
+  color: #0f172a;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+.anchor {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.anchor:hover {
+  text-decoration: underline;
+}
+
+.noteBox {
+  margin-top: 12px;
+  border-radius: 14px;
+  padding: 12px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fff7ed 100%);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.noteTitle {
+  margin: 0;
+  font-weight: 900;
+  color: #92400e;
+}
+
+.noteText {
+  margin: 6px 0 0;
+  color: #7c2d12;
+  line-height: 1.8;
+}
+
+/* エラー/ローディング */
+.errorBox {
+  max-width: 720px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.errorTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #ef4444;
+}
+
+.errorText {
+  margin: 8px 0 14px;
+  color: #475569;
+}
+
+.linkBtn {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.skeleton {
+  max-width: 1100px;
+  height: 320px;
+  margin: 24px auto;
+  border-radius: 18px;
+  background: linear-gradient(90deg, #eef2f7 0%, #f6f7fb 50%, #eef2f7 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+  }
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+  .workGrid {
+    grid-template-columns: 1fr;
+  }
+  .contactRow {
+    grid-template-columns: 1fr;
+  }
+}

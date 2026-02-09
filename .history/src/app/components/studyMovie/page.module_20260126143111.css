@@ -1,0 +1,57 @@
+.studyMovieWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-width: 200px;
+  margin-bottom: 16px;
+  position: relative; /* ⭐ボタンの基準 */
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.thumbnailImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
+
+/* ⭐お気に入りボタン（最前面にする） */
+.favBtn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  z-index: 9999;              /* ← これが超重要（最前面） */
+  pointer-events: auto;        /* 念のため */
+
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.favBtn:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,165 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background: #f6f7fb;
+}
+
+.sidebar {
+  width: 360px;
+  background: #ffffff;
+  border-right: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebarTitle {
+  font-weight: 800;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.newConvBox {
+  display: grid;
+  gap: 8px;
+}
+
+.select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+}
+
+.newConvBtn {
+  padding: 10px;
+  background: #111827;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.newConvBtn:hover {
+  opacity: 0.9;
+}
+
+.emailList {
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.emailItem {
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.emailItem:hover {
+  border-color: #cfd7ff;
+}
+
+.selected {
+  border-color: #4f46e5;
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.12);
+}
+
+.preview {
+  margin-top: 6px;
+  color: #666;
+  font-size: 13px;
+}
+
+.emailDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.noSelection {
+  color: #666;
+}
+
+.detailHeader {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.chatArea {
+  margin-top: 12px;
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+}
+
+.chatBubble {
+  max-width: 70%;
+  padding: 10px 12px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+.me {
+  margin-left: auto;
+  background: #4f46e5;
+  color: white;
+}
+
+.other {
+  margin-right: auto;
+  background: #f0f2f6;
+  color: #111;
+}
+
+.chatText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.chatMeta {
+  margin: 6px 0 0;
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.sendBox {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.sendInput {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.sendBtn {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+.sendBtn:hover {
+  opacity: 0.9;
+}

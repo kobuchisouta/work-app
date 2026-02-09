@@ -1,0 +1,91 @@
+/* 画面全体（loginContainer と同じ） */
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 110;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* フォーム（loginForm と同じ） */
+.signupBox {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* タイトル */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* フォーム */
+.form {
+  width: 100%;
+}
+
+/* 入力グループ */
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.inputGroup input,
+.inputGroup select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* エラー表示（login と同じ） */
+.error {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* 🔽 ログインと同じボタン */
+.submitBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #000; /* ← ログインと同色 */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  opacity: 0.8;
+}
+
+/* フッター */
+.footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: underline;
+}

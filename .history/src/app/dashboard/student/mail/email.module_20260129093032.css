@@ -1,0 +1,286 @@
+/* styles/emails.module.css */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	font-family: "Arial", sans-serif;
+	width: 100%;
+	
+}
+
+/* サイドバー */
+.sidebar {
+	width: 100%;
+	background-color: #62b0e8;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sidebar ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 30px;
+}
+
+.sidebar li {
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px 15px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.sidebar li:hover {
+	background-color: #1f2f54;
+}
+
+.selectedFolder {
+	background-color: #1f2f54;
+}
+
+/* メインコンテンツ */
+.main {
+	display: flex;
+	flex: 1;
+	overflow: hidden;
+}
+
+/* メールリスト */
+.emailList {
+	flex: 1;
+	padding: 20px;
+	overflow-y: auto;
+	background-color: #fff;
+	border-right: 1px solid #ddd;
+}
+
+.emailList h2 {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+.emailItem {
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s, border-color 0.3s;
+}
+
+.emailItem:hover {
+	background-color: #f9f9f9;
+	border-color: #bbb;
+}
+
+.selected {
+	background-color: #0070f3;
+	color: #fff;
+	border-color: #005bb5;
+}
+
+.emailItem h3 {
+	margin: 0 0 5px;
+	font-size: 16px;
+}
+
+.emailItem .sender {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 5px;
+}
+
+.emailItem .preview {
+	font-size: 12px;
+	color: #777;
+}
+
+/* メール詳細 */
+.emailDetails {
+	flex: 1.5;
+	padding: 20px;
+	background-color: #f9f9f9;
+}
+
+.emailDetails h2 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.emailDetails .sender {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 20px;
+}
+
+.noSelection {
+	font-size: 16px;
+	color: #888;
+	text-align: center;
+	margin-top: 50px;
+}
+
+
+.composer {
+  margin-top: 16px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.composerInput {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  outline: none;
+}
+
+.composerBtn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4caf50;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.composerBtn:hover {
+  background: #45a049;
+}
+
+/* ===== 追加（足りない場合だけ） ===== */
+
+.topTabs {
+  display: flex;
+  gap: 18px;
+  padding: 14px 18px;
+  background: #69b4e8;
+  align-items: center;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.85);
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.activeTab {
+  background: rgba(0,0,0,0.2);
+  color: #fff;
+}
+
+.sidebarTitle {
+  font-weight: 800;
+  padding: 12px 14px;
+}
+
+.convList {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.convItem {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.selectedConv {
+  border-color: #69b4e8;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.convName {
+  font-weight: 800;
+}
+
+.convPreview {
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.sectionTitle {
+  font-weight: 800;
+  margin: 8px 0 12px;
+}
+
+.emptyText {
+  opacity: 0.7;
+  padding: 12px;
+}
+
+.detailHeader {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.detailSub {
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+.messageBody {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.messageText {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.composer {
+  margin-top: 14px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  resize: vertical;
+}
+
+.sendBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  background: #35a84b;
+  color: #fff;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.errorText {
+  color: #c0392b;
+  margin-bottom: 8px;
+  font-weight: 700;
+}

@@ -1,0 +1,50 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.signupBox {
+  width: 360px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.submitBtn {
+  margin-top: 12px;
+  padding: 10px;
+  background: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+  overflow-y: auto;
+  background: #fff;
+
+  /* ✅ 追加：中身が端に寄りすぎない + 横幅を使う */
+  padding: 24px;
+}

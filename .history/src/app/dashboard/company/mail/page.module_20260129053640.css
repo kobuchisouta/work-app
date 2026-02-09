@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  background: #f6f7fb;
+}
+
+/* 左：サイドバー */
+.sidebar {
+  width: 320px;
+  background-color: #62b0e8;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+.folder {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  margin-bottom: 8px;
+}
+
+.folder:hover {
+  background-color: #1f2f54;
+}
+
+.selectedFolder {
+  background-color: #1f2f54;
+}
+
+/* 中央：メール（メッセージ）一覧 */
+.main {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  background: #fff;
+}
+
+.emailList {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+}
+
+.emailItem {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  background: #fff;
+}
+
+.emailItem:hover {
+  background-color: #f9f9f9;
+  border-color: #bbb;
+}
+
+.selected {
+  background-color: #0070f3;
+  color: #fff;
+  border-color: #005bb5;
+}
+
+.sender {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.preview {
+  font-size: 12px;
+  color: #777;
+}
+
+/* 右：詳細 */
+.emailDetails {
+  width: 420px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}
+
+.noSelection {
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* 送信欄 */
+.composer {
+  margin-top: 16px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.composerInput {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  resize: vertical;
+  outline: none;
+  background: #fff;
+}
+
+.composerBtn {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #4caf50;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.composerBtn:hover {
+  background: #45a049;
+}

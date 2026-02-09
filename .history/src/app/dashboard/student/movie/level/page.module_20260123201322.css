@@ -1,0 +1,34 @@
+/* ✅ モーダル全体 */
+.modalContent {
+  width: min(1100px, 96vw);
+  height: min(85vh, 900px);
+  background: red;
+  border-radius: 12px;
+  padding: 24px;
+  overflow: auto;
+
+}
+
+/* ✅ YouTube表示を大きく・比率固定（16:9） */
+.modalVideo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-top: 12px;
+}
+
+/* react-youtube は内部に iframe を作るので、それも100%にする */
+.modalVideo iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* 文章のカードっぽさ */
+.modalContent p {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f7f7f7;
+  line-height: 1.7;
+}

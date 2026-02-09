@@ -1,0 +1,51 @@
+.page {
+  width: 100%;
+}
+
+.shell {
+  width: 100%;
+  max-width: 1200px; /* ✅ 画面をもっと使う */
+  margin: 0 auto;    /* ✅ 真ん中に寄せる */
+}
+
+.h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.sub {
+  margin-top: 6px;
+  opacity: 0.7;
+}
+
+.list {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+  background: #fff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.name {
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.meta {
+  margin: 0;
+  opacity: 0.75;
+  font-size: 14px;
+}

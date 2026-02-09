@@ -1,0 +1,82 @@
+/* src/app/dashboard/company/students/page.module.css */
+
+.page {
+  /* ✅ 生徒一覧は白でOK */
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+
+  /* 全体の余白 */
+  padding: 22px 24px;
+  box-sizing: border-box;
+}
+
+/* ✅ 左に寄りすぎを解消：中央寄せ(max-width + margin auto)をやめて、画面を使う */
+.shell {
+  width: 100%;
+  max-width: none;     /* ← これが大事 */
+  margin: 0;           /* ← これが大事 */
+}
+
+/* 見出し */
+.h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* ✅ カードを横に広げて見やすく */
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+/* 画面が狭い時は1列 */
+@media (max-width: 900px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 14px 14px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  transition: 0.12s;
+}
+
+.name {
+  font-weight: 900;
+  margin: 0;
+  font-size: 16px;
+}
+
+.meta {
+  margin-top: 8px;
+  color: #334155;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.email {
+  margin-top: 6px;
+  color: #0f172a;
+  font-weight: 800;
+}

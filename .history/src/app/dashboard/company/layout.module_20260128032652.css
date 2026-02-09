@@ -1,0 +1,14 @@
+.container {
+  display: flex;         /* ✅ flexは戻す */
+  min-height: 100vh;     /* ✅ 画面の高さを確保 */
+  width: 100%;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;         /* ✅ 右側も縦100% */
+  overflow-y: auto;
+  background: #fff;
+  padding: 24px;
+}

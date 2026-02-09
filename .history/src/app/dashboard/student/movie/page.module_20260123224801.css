@@ -1,0 +1,117 @@
+/* ===== レベル一覧 ===== */
+.movieWrap {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.Beginnermovie {
+	margin-top: 40px;
+}
+
+.Beginnermovie > .title {
+	font-size: 18px;
+	background-color: #62b0e8;
+	color: white;
+	padding: 10px 60px;
+	border-radius: 0px 20px 0px 0px;
+	display: inline-block;
+}
+
+/* 横スクロール動画リスト */
+.contents {
+	display: flex;
+	gap: 32px;
+	width: 100%;
+	border-top: 2px solid #d9d9d9;
+	overflow-x: auto;
+	padding: 20px 20px 0;
+	scrollbar-width: thin;
+}
+
+.contents::-webkit-scrollbar {
+	height: 6px;
+}
+
+.contents::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 4px;
+}
+
+.modalVideo {
+	border: none;
+}
+
+/* ===== モーダル ===== */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+/* モーダル本体 */
+.modalContent {
+	width: 80%;
+	height: 80%;
+	background-color: #fff;
+	padding: 24px;
+	border-radius: 8px;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+/* タイトル */
+.modalContent h2 {
+	font-size: 1.5rem;
+	margin-bottom: 16px;
+}
+
+/* iframe / react-youtube */
+.modalContent iframe,
+.modalContent :global(iframe) {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border: none;
+	margin-bottom: 20px;
+}
+
+/* 説明文 */
+.modalContent p {
+	margin-top: 10px;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+	padding: 20px;
+	color: #333;
+	line-height: 1.6rem;
+}
+
+/* 閉じるボタン */
+.modalContent button {
+	margin: 24px auto 0;
+	padding: 10px 32px;
+	background-color: #0070f3;
+	color: #fff;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.modalContent button:hover {
+	background-color: #005bb5;
+}
+
+.modalContent button:focus {
+	outline: none;
+}

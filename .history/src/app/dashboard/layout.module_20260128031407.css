@@ -1,0 +1,21 @@
+.container {
+  
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+
+  /* height:100vh は残しても良いけど、まずは min-height に寄せた方が安全 */
+  min-height: 100vh;
+  overflow-y: auto;
+
+  background: #fff;
+
+  /* ✅ 右側に余白を付ける（これだけで “左に詰まってる感” が減る） */
+  padding: 24px 32px;
+  box-sizing: border-box;
+}

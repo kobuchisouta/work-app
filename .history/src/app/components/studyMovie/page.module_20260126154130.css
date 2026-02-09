@@ -1,0 +1,62 @@
+.studyMovieWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  min-width: 200px;
+  margin-bottom: 16px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  position: relative; /* ★ボタン配置用 */
+}
+
+.thumbnailImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
+
+/* ★お気に入りボタン */
+.favoriteBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 5;
+
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.favoriteBtn:hover {
+  transform: scale(1.05);
+}
+
+.star {
+  font-size: 18px;
+  line-height: 1;
+  color: #999;
+}
+
+.starActive {
+  color: #f5b301;
+}

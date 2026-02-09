@@ -1,0 +1,182 @@
+.page {
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+}
+
+/* ===== 上：青いタブ ===== */
+.topTabs {
+  height: 78px;
+  background: #62b0e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 900;
+  font-size: 15px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.activeTab {
+  background: rgba(31, 47, 84, 0.95);
+  color: #fff;
+}
+
+.topRightNote {
+  margin-left: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ===== 本体（白い枠） ===== */
+.paper {
+  width: calc(100% - 24px);
+  margin: 14px auto 18px;
+  border: 1px solid #e9e9e9;
+  background: #fff;
+  min-height: calc(100vh - 78px - 40px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ヘッダー（企業…） */
+.threadHeader {
+  padding: 18px 18px 10px;
+}
+
+.threadTitle {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* 薄い区切り線 */
+.hr {
+  height: 1px;
+  background: #ededed;
+  width: 100%;
+}
+
+/* 中央：メッセージ表示エリア */
+.threadBody {
+  flex: 1;
+  padding: 0 18px;
+  position: relative;
+}
+
+.emptyText {
+  padding: 18px 0;
+  color: #666;
+}
+
+/* メッセージ一覧（ある場合） */
+.msgList {
+  padding: 14px 0;
+  display: grid;
+  gap: 10px;
+}
+
+.msgRow {
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.msgRowActive {
+  border-color: #62b0e8;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.msgTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.msgFrom {
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.msgTime {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.msgPreview {
+  font-size: 13px;
+  opacity: 0.85;
+  white-space: pre-wrap;
+}
+
+/* 画像の中央テキスト */
+.centerHint {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 210px;
+  text-align: center;
+  color: #777;
+  opacity: 0.8;
+}
+
+/* ===== 下：入力欄＋送信 ===== */
+.composerWrap {
+  padding: 0 18px 18px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 130px;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  outline: none;
+  background: #3b3b3b;
+  color: #fff;
+  resize: vertical;
+}
+
+.textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.textarea:disabled {
+  opacity: 0.55;
+}
+
+.sendBtn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #4caf50;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.sendBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

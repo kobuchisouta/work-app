@@ -1,0 +1,65 @@
+.page {
+  width: 100%;
+  background: #fff; /* 生徒一覧は白でOK */
+}
+
+.shell {
+  width: 100%;
+  max-width: 1200px; /* 画面をもっと使う */
+  margin: 0 auto;    /* 真ん中寄せ */
+}
+
+.h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.sub {
+  margin-top: 8px;
+  opacity: 0.7;
+}
+
+.grid {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); /* 横幅使う */
+}
+
+.card {
+  display: block;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #cfd8e3;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.name {
+  font-weight: 800;
+  font-size: 16px;
+  margin: 0;
+}
+
+.meta {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.state {
+  padding: 24px;
+}
+
+.error {
+  color: #d32f2f;
+}
